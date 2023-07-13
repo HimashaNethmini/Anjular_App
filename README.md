@@ -1,2 +1,2 @@
-# Anjular_App
+# Anjular_Calculator
 This repository is 
