@@ -7,4 +7,12 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Angular';
+
+  calValue: number = 0;
+  funcT: any = 'NoFunction';
+
+  onClickValue ( val:string, type:any) {
+    console.log(val, type);
+  }
+
 }
