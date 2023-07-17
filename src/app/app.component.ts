@@ -67,9 +67,43 @@ export class AppComponent {
       this.secondNumber = 0;
       this.calNumber = 'noValue';
       this.funcT = val;
-
     }
+    //subtraction
+    if (this.funcT == '-'){
+      const total = this.firstNumber - this.secondNumber;
+      //showing the output
+      this.calValue = total;
+      //
+      this.firstNumber = total;
+      this.secondNumber = 0;
+      this.calNumber = 'noValue';
+      this.funcT = val;
 
+  }
+  //multiplication
+  if (this.funcT == 'x'){
+    const total = this.firstNumber * this.secondNumber;
+    //showing the output
+    this.calValue = total;
+    //
+    this.firstNumber = total;
+    this.secondNumber = 0;
+    this.calNumber = 'noValue';
+    this.funcT = val;
+  }
+
+  //division
+  if (this.funcT == '/'){
+    const total = this.firstNumber / this.secondNumber;
+    //showing the output
+    this.calValue = total;
+    //
+    this.firstNumber = total;
+    this.secondNumber = 0;
+    this.calNumber = 'noValue';
+    this.funcT = val;
+  }
+    
   }
 
 }
