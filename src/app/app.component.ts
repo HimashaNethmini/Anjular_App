@@ -57,53 +57,46 @@ export class AppComponent {
   }
 
   //method declare
-  valueCalculate (val: String) {
+  valueCalculate (val: string) {
     if (this.funcT == '+'){
-      const total = this.firstNumber + this.secondNumber;
-      //showing the output
-      this.calValue = total;
-      //
-      this.firstNumber = total;
-      this.secondNumber = 0;
-      this.calNumber = 'noValue';
-      this.funcT = val;
+      const Total = this.firstNumber + this.secondNumber;
+      this.totalAssignValues(Total, val);
+     
     }
     //subtraction
     if (this.funcT == '-'){
-      const total = this.firstNumber - this.secondNumber;
-      //showing the output
-      this.calValue = total;
-      //
-      this.firstNumber = total;
-      this.secondNumber = 0;
-      this.calNumber = 'noValue';
-      this.funcT = val;
+      const Total = this.firstNumber - this.secondNumber;
+      this.totalAssignValues(Total, val);
+    
 
   }
   //multiplication
   if (this.funcT == 'x'){
-    const total = this.firstNumber * this.secondNumber;
-    //showing the output
-    this.calValue = total;
-    //
-    this.firstNumber = total;
-    this.secondNumber = 0;
-    this.calNumber = 'noValue';
-    this.funcT = val;
+    const Total = this.firstNumber * this.secondNumber;
+    this.totalAssignValues(Total, val);
   }
 
   //division
   if (this.funcT == '/'){
-    const total = this.firstNumber / this.secondNumber;
-    //showing the output
-    this.calValue = total;
-    //
-    this.firstNumber = total;
-    this.secondNumber = 0;
-    this.calNumber = 'noValue';
-    this.funcT = val;
+    const Total = this.firstNumber / this.secondNumber;
+    this.totalAssignValues(Total, val);
+  }
+
+  //percentage
+  if (this.funcT == '%'){
+    const Total = this.firstNumber % this.secondNumber;
+    this.totalAssignValues(Total, val);
   }
     
+  }
+  totalAssignValues(Total: number, val: string) {
+     //showing the output
+     this.calValue = Total;
+     this.firstNumber = Total;
+     this.secondNumber = 0;
+     this.calNumber = 'noValue';
+     this.funcT = val;
+
   }
 
 }
