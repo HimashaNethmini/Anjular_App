@@ -62,6 +62,12 @@ export class AppComponent {
       const total = this.firstNumber + this.secondNumber;
       //showing the output
       this.calValue = total;
+      //
+      this.firstNumber = total;
+      this.secondNumber = 0;
+      this.calNumber = 'noValue';
+      this.funcT = val;
+
     }
 
   }
