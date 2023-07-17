@@ -37,8 +37,12 @@ export class AppComponent {
   }
 
   onFunctionClick (val:string) {
+    //check user enter clear or not
+    if (this.funcT == 'c') {
+      this.clearAll();
+    }
     //checking if it's the first function input by the user
-    if(this.funcT == 'NoFunction') {
+    else if(this.funcT == 'NoFunction') {
       this.firstNumber = this.calValue;
       this.calValue = 0;
       this.calNumber = 'noValue';
@@ -75,7 +79,7 @@ export class AppComponent {
       }
     
   }
-  
+
   //multiplication
   if (this.funcT == 'x'){
     const Total = this.firstNumber * this.secondNumber;
@@ -124,6 +128,15 @@ export class AppComponent {
     this.funcT = 'NoFunction'
     this.calNumber = 'noValue'
 
+  }
+
+  //clear method
+  clearAll (){
+    this.firstNumber = 0;
+    this.secondNumber = 0;
+    this.calValue = 0;
+    this.funcT = 'NoFunction';
+    this.calNumber = 'noValue';
   }
 
 }
