@@ -43,9 +43,27 @@ export class AppComponent {
       this.calValue = 0;
       this.calNumber = 'noValue';
       this.funcT = val;
-
-
     }
+    else if ( this.funcT != 'NoFunction'){
+      this.secondNumber = this.calValue;
+
+      //calculation part
+      this.valueCalculate(val);
+
+      
+    }
+
+    
+  }
+
+  //method declare
+  valueCalculate (val: String) {
+    if (this.funcT == '+'){
+      const total = this.firstNumber + this.secondNumber;
+      //showing the output
+      this.calValue = total;
+    }
+
   }
 
 }
