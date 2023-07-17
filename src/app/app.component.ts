@@ -47,12 +47,9 @@ export class AppComponent {
     else if ( this.funcT != 'NoFunction'){
       this.secondNumber = this.calValue;
 
-      //calculation part
+      //calculation method called
       this.valueCalculate(val);
-
-      
     }
-
     
   }
 
@@ -61,31 +58,52 @@ export class AppComponent {
     if (this.funcT == '+'){
       const Total = this.firstNumber + this.secondNumber;
       this.totalAssignValues(Total, val);
+      //equal
+      if(val == '='){
+        this.onEqualPress()
+      }
      
     }
+
     //subtraction
     if (this.funcT == '-'){
       const Total = this.firstNumber - this.secondNumber;
       this.totalAssignValues(Total, val);
+      //equal
+      if(val == '='){
+        this.onEqualPress()
+      }
     
-
   }
+  
   //multiplication
   if (this.funcT == 'x'){
     const Total = this.firstNumber * this.secondNumber;
     this.totalAssignValues(Total, val);
+    //equal
+    if(val == '='){
+      this.onEqualPress()
+    }
   }
 
   //division
   if (this.funcT == '/'){
     const Total = this.firstNumber / this.secondNumber;
     this.totalAssignValues(Total, val);
+    //equal
+    if(val == '='){
+      this.onEqualPress()
+    }
   }
 
   //percentage
   if (this.funcT == '%'){
     const Total = this.firstNumber % this.secondNumber;
     this.totalAssignValues(Total, val);
+    //equal
+    if(val == '='){
+      this.onEqualPress()
+    }
   }
     
   }
@@ -96,6 +114,15 @@ export class AppComponent {
      this.secondNumber = 0;
      this.calNumber = 'noValue';
      this.funcT = val;
+
+  }
+
+  //equal method
+  onEqualPress () {
+    this.firstNumber = 0;
+    this.secondNumber = 0;
+    this.funcT = 'NoFunction'
+    this.calNumber = 'noValue'
 
   }
 
